@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Form Validation</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://bit.ly/406jZiD" alt="logo" width="50">
+            </div>
+            <ul class="menu">
+                <li><a href=#hero>home</a></li>
+                <li><a href="profile.html">profile</a></li>
+                <li><a href=#portofolio>portofolio</a></li>
+                <li><a href=#messageUs>message us</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <div class="container">
+        <div class="ilustrasi"><img src="https://bit.ly/3mAYs3R" alt="ilustrasi seorang frontend web developer">
+        </div>
+        <div class="hero" id="hero">
+            <div class="creator">
+            <h1>Hai, nama saya julfani nurdin</h1>
+            <p>saya adalah seorang frontend web develover</p>
+        </div>
+
+        </div>
+        <br><br>
+        <center><h1>Keahlian saya</h1></center>
+        <div class="portofolio" id="portofolio">
+            
+            <div class="img1">
+                <img src="https://th.bing.com/th/id/OIP.sxgAuWLSIvPXh0cZ2bmQvgHaIj?pid=ImgDet&rs=1" alt="html">
+                <p>html</p>
+            </div>
+            <div class="img2">
+                <img src="https://th.bing.com/th/id/R.846eafe34ddf5c4b45514902fcf52ad9?rik=KN7M0sj1sGZg8g&pid=ImgRaw&r=0" alt="css">
+                <p>css</p>
+            </div>
+            <div class="img3">
+                <img src="https://openclipart.org/image/800px/272343" alt="javascript">
+                <p>javascript</p>
+            </div>
+        </div>
+        <div class="messageUs" id="messageUs">
+            <div class="formSection">
+                <form class="messageForm" name="messageForm" onsubmit="return validateForm()">
+                    nama : <input type="text" name="fullName" placeholder="nama">
+                    <br>
+                    tanggal lahir : <input type="date" name="tglLahir" placeholder="tanggal lahir">
+                    <br>
+                    jenis kelamin : 
+                    <input type="radio" id="male" name="gender" value="laki - laki">
+                    <label for="male">laki laki</label>
+                    <input type="radio" id="female" name="gender" value="perempuan">
+                    <label for="female">perempuan</label>
+                    <br>
+                    pesan: 
+                    <textarea name="pesan" id="pesan" cols="30" rows="10"></textarea>
+                    <br>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+            <div class="formOutput">
+                <p>nama : <span id="senderFullName"></span></p>
+                <p>tanggal lahir : <span id="sendertglLahir"></span></p>
+                <p>jenis kelamin : <span id="sendergender"></span></p>
+                <p>pesan : <span id="pesan"></span></p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <p>created by julfaninst</p>
+</footer>
+</body>
+</html>

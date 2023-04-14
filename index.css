@@ -1,0 +1,109 @@
+body {
+margin-left: 50px;
+margin-right: 50px;
+padding : 0;
+font-family: 'Courier New', Courier, monospace;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* style untuk logo */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* style untuk menu di navbar */
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 10px;
+    padding: 0;
+}
+
+/* style untuk item menu di navbar */
+.menu li {
+    margin-left: 10px;
+}
+
+/* style untuk link item menu di navbar */
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+.menu li a:hover {
+    background-color: #555;
+
+}
+.hero{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.ilustrasi img {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.portofolio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.img1 img{
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+.img2 img{
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+.img3 img{
+     width: 100px;
+    height: auto;
+    border-radius: 10px;
+};
+.messageUs {
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+}
+.formSection{
+    display: flex;
+    flex: 2;
+    margin-left: 10px;
+    padding-top: 20px;
+    align-items: center;
+    background-color: aqua;
+}
+.formOutput{
+    display: flex;
+    flex: 1;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: auto;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
