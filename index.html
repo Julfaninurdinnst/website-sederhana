@@ -4,81 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Form Validation</title>
-    <link rel="stylesheet" href="index.css">
+    <title>kita malas.com</title>
+    <link rel="stylesheet" href="css/index.css">
+
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <img src="https://bit.ly/406jZiD" alt="logo" width="50">
+            <div class="navbar-logo"><h1>kita malas.com</h1></div>
+            <div class="navbar-menu">
+                <div> 
+                    <button class="home-btn navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><a href=#> home</a></button>
+                    <button class="profile-btn navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><a href="pages/profile.html"> profile</a></button>
+                    <button class="Achievement-btn navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><a href="pages/Achievement.html"> Achievement</a></button>
+                    <button class="about-btn navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><a href="pages/messageUs.html"> help</a></button>
+                </div> 
+            </div> 
+            <div class="navbar-toggle" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
             </div>
-            <ul class="menu">
-                <li><a href=#hero>home</a></li>
-                <li><a href="profile.html">profile</a></li>
-                <li><a href=#portofolio>portofolio</a></li>
-                <li><a href=#messageUs>message us</a></li>
-            </ul>
         </nav>
+        
     </header>
-<main>
-    <div class="container">
-        <div class="ilustrasi"><img src="https://bit.ly/3mAYs3R" alt="ilustrasi seorang frontend web developer">
-        </div>
-        <div class="hero" id="hero">
-            <div class="creator">
-            <h1>Hai, nama saya julfani nurdin</h1>
-            <p>saya adalah seorang frontend web develover</p>
-        </div>
+    <main>
+            <section id="hero"> 
+                <div class="container">
+                    <div class="hero">
+                        <div class="slideshow-container">
+                            <img class="mySlides" src="assets/1.png"/>
+                            <img class="mySlides" src="assets/2.png"/>
+                            <img class="mySlides" src="assets/3.png"/>
+                            <img class="mySlides" src="assets/4.png"/>
+                            <img class="mySlides" src="assets/5.png"/>
+                            <img class="mySlides" src="assets/6.png"/>
+                            <img class="mySlides" src="assets/7.png"/>
+                            <img class="mySlides" src="assets/8.png"/>
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+                        </div>
 
+                        <div class="title">
+                            <h1 class="title">Hai <span id="nama-kita"></span>, selamat datang di website kita malas.com</h1>
+                            <p class="subtitle">Website untuk orang pemalas berbagi ide</p>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+            </section>
+            <section id="progres">
+                <div class="container">
+                    <center><h1>Our progress</h1></center>
+                        <ul class="progress">
+                            <div class="baris1">
+                                <div class="progress-img">
+                                    <img class="img" src="assets/11.jpg" width="100px">
+                                    <span class="desc">mengumpulkan ide</span>
+                                </div>
+                            <h1 class="arrow-destop">→</h1>
+                            <h1 class="arrow-mobile">↓</h1>
+                                <div class="progress-img">
+                                    <img class="img" src="assets/12.png" width="100px">
+                                    <span class="desc">menyeleksi ide</span>
+                                </div>
+                            <h1 class="arrow-destop">→</h1>
+                            <h1 class="arrow-mobile">↓</h1>
+                                <div class="progress-img">
+                                    <img class="img" src="assets/13.png" width="100px">
+                                    <span class="desc">mengumpulkan ide menarik</span>
+                                </div>
+                            <h1 class="arrow-destop">⤦</h1>
+                            <h1 class="arrow-mobile">↓</h1>
+                            </div>
+                            <div class="baris2">
+                                <div class="progress-img">
+                                    <img class="img" src="assets/15.jpg" width="100px">
+                                    <span class="desc">berikan ide ke klient</span>
+                                </div>
+                            <h1 class="arrow-destop">←</h1>
+                            <h1 class="arrow-mobile">↓</h1>
+
+                                <div class="progress-img">
+                                    <img class="img" src="assets/14.jpg" width="100px">
+                                    <span class="desc">ubah ide jadi produk</span>
+                                </div>
+                        </div>
+                    </ul>
+                </div>
+            </section>
+            <section class="pesan">
+                <center><h1> berikan ide dan gagasan anda!!!!!!</h1></center>
+                <div class="form-container">
+                    <div class="form-group">
+                        <form id="msg-form" onsubmit="return setSenderUI()">
+                            <label for="nama">Nama :</label><br>
+                            <input type="text" id="nama" name="nama"><br>
+                            <label for="tgl-lahir">tanggal lahir :</label><br>
+                            <input type="date" id="tgl-lahir" name="tgl-lahir"><br>
+                            <label for="kelamin">Jenis kelamin :</label><br>
+                            <div class="radio-btn">
+                                <input class="radio-btn" type="radio" id="laki" name="kelamin" value="laki-laki">
+                                <p for="laki">Laki-Laki</p>
+                                <input class="radio-btn" type="radio" id="perempuan" name="kelamin" value="perempuan">
+                                <p for="perempuan">Perempuan</p>
+                            </div><br>
+                            <label for="pesan">apa ide anda??? :</label><br>
+                            <textarea id="pesan" name="pesan"></textarea><br><br>
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div class="form-output">
+                        <div class="message-show">
+                            <p>
+                                <h2>Current time : </h2><span id="sender-time"></span>
+                                <br>
+                                <h3>Nama : </h3><span id="sender-full-name"></span>
+                                <h3>Tanggal Lahir : </h3><span id="sender-birthDate"></span>
+                                <h3>jenis kelamin : </h3><span id="sender-gender"></span>
+                                <h3>ide anda : </h3><span id="sender-messages"></span>
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+            </section>
         </div>
-        <br><br>
-        <center><h1>Keahlian saya</h1></center>
-        <div class="portofolio" id="portofolio">
-            
-            <div class="img1">
-                <img src="https://th.bing.com/th/id/OIP.sxgAuWLSIvPXh0cZ2bmQvgHaIj?pid=ImgDet&rs=1" alt="html">
-                <p>html</p>
-            </div>
-            <div class="img2">
-                <img src="https://th.bing.com/th/id/R.846eafe34ddf5c4b45514902fcf52ad9?rik=KN7M0sj1sGZg8g&pid=ImgRaw&r=0" alt="css">
-                <p>css</p>
-            </div>
-            <div class="img3">
-                <img src="https://openclipart.org/image/800px/272343" alt="javascript">
-                <p>javascript</p>
-            </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>created by julfani nst</p>
         </div>
-        <div class="messageUs" id="messageUs">
-            <div class="formSection">
-                <form class="messageForm" name="messageForm" onsubmit="return validateForm()">
-                    nama : <input type="text" name="fullName" placeholder="nama">
-                    <br>
-                    tanggal lahir : <input type="date" name="tglLahir" placeholder="tanggal lahir">
-                    <br>
-                    jenis kelamin : 
-                    <input type="radio" id="male" name="gender" value="laki - laki">
-                    <label for="male">laki laki</label>
-                    <input type="radio" id="female" name="gender" value="perempuan">
-                    <label for="female">perempuan</label>
-                    <br>
-                    pesan: 
-                    <textarea name="pesan" id="pesan" cols="30" rows="10"></textarea>
-                    <br>
-                    <input type="submit" value="submit">
-                </form>
-            </div>
-            <div class="formOutput">
-                <p>nama : <span id="senderFullName"></span></p>
-                <p>tanggal lahir : <span id="sendertglLahir"></span></p>
-                <p>jenis kelamin : <span id="sendergender"></span></p>
-                <p>pesan : <span id="pesan"></span></p>
-            </div>
-        </div>
-    </div>
-</main>
-<footer class="footer">
-    <p>created by julfaninst</p>
-</footer>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
